@@ -8,6 +8,8 @@ import javax.jws.WebService;
 import com.cike.cxf.ws.HelloWorld;
 import com.cike.domain.Cat;
 import com.cike.domain.User;
+import com.cike.service.UserService;
+import com.cike.service.impl.UserServiceImpl;
 
 @WebService(endpointInterface="com.cike.cxf.ws.HelloWorld",serviceName="HelloWorldWs")
 public class HelloWorldWs implements HelloWorld {
@@ -19,7 +21,8 @@ public class HelloWorldWs implements HelloWorld {
 
 	@Override
 	public List<Cat> getCatsByUser(User user) {
-		return null;
+		UserService userService = new UserServiceImpl();
+		return userService.getCatsByUser(user);
 	}
 
 }

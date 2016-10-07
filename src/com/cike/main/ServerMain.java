@@ -10,7 +10,7 @@ public class ServerMain {
 	public static void main(String[] args) {
 		HelloWorld hw = new HelloWorldWs();
 		// 调用Endpoint的publish方法发布WebService
-		Endpoint.publish("http://10.19.155.102/hello", hw);
+		Endpoint.publish("http://192.168.1.103/hello", hw);
 		System.out.println("WebService暴露成功！");
 	}
 
